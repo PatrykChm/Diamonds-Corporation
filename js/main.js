@@ -13,4 +13,13 @@ const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
 	footerYear.innerText = year
 }
+
+const scrollObsever = () => {
+	const currentScrlPosition = window.scrollY
+	navMobile.classList.remove('nav-mobile--active')
+	navBtn.classList.remove('is-active')
+}
+
+window.addEventListener('scroll', scrollObsever)
+
 handleCurrentYear()
